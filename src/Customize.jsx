@@ -1,14 +1,13 @@
-import set1 from '/wheelSVG.svg'
 import Card from './Card'
 import sql from '/sql.svg';
 import linux from '/linux.svg';
 import react from '/react.svg';
 import './input.css'
-import { useState, useEffect} from 'react';
-function Customize({amount, setAmount, difficulty, setDifficulty, topic, setTopic, display, setDisplay}){
+import {useEffect} from 'react';
+function Customize({setAmount, setDifficulty, setTopic, display, setDisplay}){
     
     useEffect(() => {
-        window.scrollTo(0, 0); // Scrolls to the top when this component is mounted
+        window.scrollTo(0, 0); 
       }, []);
 
     function selected(x, y, z){

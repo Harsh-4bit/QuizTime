@@ -1,10 +1,5 @@
-import timer from '/timer.svg';
-import sql from '/sql.svg';
-import react from '/react.svg';
-import { useEffect, useState } from 'react';
 function Card({top, dif, sec, num, img, onClick}){
     
-
     function Style1(dif){
         if(dif === 'Easy'){
             return 'border-2 border-green-400 bg-green-50 hover:drop-shadow-[0px_0px_35px_rgba(0,255,127,0.75)]';
@@ -21,12 +16,7 @@ function Card({top, dif, sec, num, img, onClick}){
         }
         else if(dif === 'Hard') return 'bg-red-500';
         return 'bg-orange-500';
-    
     }
-    
-    
-    
-
     
     return(
         <div className={`flex flex-col justify-evenly items-center w-100 h-60 relative overflow-hidden ${Style1(dif)} text-black bg-gray-100 rounded-[12px] cursor-pointer hover:-translate-y-2 duration-300`} onClick={onClick}>

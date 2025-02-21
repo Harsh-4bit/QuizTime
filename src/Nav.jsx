@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import quizLogo from '/quizSVG.svg'; 
 
 
-function Nav({display, setDisplay}) {
+function Nav({display}) {
     
     return (
         <div className={`${display ? 'flex': 'hidden'} fixed top-1 left-[10%] right-[10%] z-50 justify-between w-[80%] h-15 px-10 items-center rounded-[35px] border-black drop-shadow-md bg-amber-100 opacity-85`}>

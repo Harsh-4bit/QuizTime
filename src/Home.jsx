@@ -1,14 +1,12 @@
-import { useState, useEffect } from 'react';
+import {useEffect } from 'react';
 import quizbg from '/quizBG.png'; 
 import tut from '/tut.png';
 import brain from '/brain.png';
 import degree from '/degree.png';
-import bookSVG from '/bookSVG.svg';
-
 
 function Home({display, setDisplay}){
     useEffect(() => {
-        if(display) window.scrollTo(0, 0); // Scrolls to the top when this component is mounted
+        if(display) window.scrollTo(0, 0); 
       }, [display]);
 
 
@@ -35,27 +33,27 @@ function Home({display, setDisplay}){
                 <img src={tut} alt="Incorrect URL" className='w-100 h-17 rounded-4xl my-auto mr-10 opacity-60 border-2 drop-shadow-lg border-amber-900 hover:opacity-100 hover:-translate-y-1 hover:rounded-none animate-bounce duration-200 ease-in-out'/>
             </div>
             
-            <div className='flex flex flex-col items-center h-140 w-[70%] mx-auto mt-30'>
-               <div className='flex flex-wrapjustify-center gap-10 appear'>
+            <div className='flex flex-col h-[100vh] w-[70%] justify-evenly mx-auto'>
+               <div className='flex h-auto gap-10 justify-between items-center appear'>
                     <img src={brain} alt="Incrrect url" className='w-25 h-20 hover:-translate-y-1 cursor-pointer animate-pulse duration-200 ease-in-out' />
-                    <h1 className='text-3xl font-[poppins] my-auto hover:scale-105 duration-200 ease-in-out' >Fixed time for each question based on Difficulty.
-                        <h3 className='text-2xl font-sans font-extralight mt-2 duration-200'>
-                            Test your knowledge and speed with our interactive quiz! Answer questions within a fixed time, challenge yourself, and improve your quick thinking. Are you ready to compete and learn?
-                        </h3>
-
-                    </h1>
+                    <div className='h-auto w-auto'>
+                        <h1 className='text-3xl font-[poppins] my-auto hover:scale-105 duration-200 ease-in-out' >Fixed time for each question based on Difficulty.</h1>
+                            <h3 className='text-2xl font-sans font-extralight mt-2 duration-200'>
+                                Test your knowledge and speed with our interactive quiz! Answer questions within a fixed time, challenge yourself, and improve your quick thinking. Are you ready to compete and learn?
+                            </h3>
+                    </div>
                </div>
                
-               <div className='flex justify-center gap-10 mt-20 appear'>
+               <div className='flex h-auto justify-between gap-10 appear'>
                     <img src={degree} alt="incorrect url" className='w-25 h-20 hover:-translate-y-1 cursor-pointer animate-pulse duration-200 ease-in-out' />
-                    <h1 className='text-3xl font-[poppins] my-auto hover:scale-105 duration-200 ease-in-out'>Detailed solution for each question to improve understanding.
-                        <h3 className='text-2xl font-sans font-extralight mt-2 duration-200'>
-                            Get in-depth explanations for every question! Learn from detailed solutions that help you understand concepts, improve problem-solving skills, and avoid mistakes in the future.
-                        </h3>
-
-                    </h1>
+                    <div>
+                        <h1 className='text-3xl font-[poppins] my-auto hover:scale-105 duration-200 ease-in-out'>Detailed solution for each question to improve understanding.</h1>
+                            <h3 className='text-2xl font-sans font-extralight mt-2 duration-200'>
+                                Get in-depth explanations for every question! Learn from detailed solutions that help you understand concepts, improve problem-solving skills, and avoid mistakes in the future.
+                            </h3>
+                    </div>
                </div>
-                    <button className='bg-black text-white w-25 h-12 rounded-md font-[poppins] mt-20 cursor-pointer hover:bg-amber-100 hover:text-amber-800 hover:scale-120 hover:-translate-y-1 duration-200 ease-in-out' onClick={() => setDisplay(!display)}>Start</button>
+                    <button className='bg-black text-white w-25 h-12 mx-auto rounded-md font-[poppins] cursor-pointer hover:bg-amber-100 hover:text-amber-800 hover:scale-120 hover:-translate-y-1 duration-200 ease-in-out' onClick={() => setDisplay(!display)}>Start</button>
 
             </div>
 

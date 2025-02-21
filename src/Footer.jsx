@@ -14,16 +14,15 @@ function Footer(){
             </div>
             <div className="flex flex-col">
                 <h1 className="text-xl text-white font-[poppins]">Assets</h1>
+                <a href="https://quizapi.io/" className="text-white">API</a>
                 <a href="https://www.svgrepo.com/svg/512317/github-142" className="text-white">SVG</a>
                 <a href="https://www.canva.com/" className="text-white">Canva</a>
             </div>
             <div className="flex flex-col">
                 <h1 className="text-xl text-white font-[poppins]">Deployment</h1>
                 <a href="https://www.vercel.com/" className="text-white">Vercel</a>
-                <a href="https://www.svgrepo.com/svg/512317/github-142" className="text-white">Gihub</a>
+                <a href="https://github.com/Harsh-4bit/QuizTime" className="text-white">Gihub</a>
             </div>
-
-
         </div>
 
     );

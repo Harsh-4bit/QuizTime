@@ -5,7 +5,7 @@ import Nav from './Nav'
 import Customize from './Customize'
 import Contact from './Contact'
 import Footer from './Footer'
-import { useState } from 'react'
+import {useState} from 'react'
 import Question from './Question'
 import Result from './Result'
 function App() {
@@ -18,18 +18,18 @@ function App() {
 
   return (
     <>
-      <Nav display={display} setDisplay={setDisplay}/>
+      <Nav display={display}/>
        
        <Routes>
           <Route path='/' element={<Home display={display} setDisplay={setDisplay}/>}/>
-          <Route path='/Customize' element={<Customize amount={amount} setAmount={setAmount} difficulty={difficulty} setDifficulty={setDifficulty} topic={topic} setTopic={setTopic} display={display} setDisplay={setDisplay}/>}/>
+          <Route path='/Customize' element={<Customize setAmount={setAmount} setDifficulty={setDifficulty} setTopic={setTopic} display={display} setDisplay={setDisplay}/>}/>
           <Route path='/Contact' element={<Contact/>}/>
        </Routes>
-      <Question amount={amount} difficulty={difficulty} topic={topic} display={display} setDisplay={setDisplay} over={over} setOver={setOver} count={count} setCount={setCount}/>
-      <Result topic={topic} difficulty={difficulty} amount={amount} over={over} count={count} setOver={setOver} setCount={setCount} display={display} setDisplay={setDisplay}/>
+      
+      <Question amount={amount} difficulty={difficulty} topic={topic} display={display} over={over} setOver={setOver} count={count} setCount={setCount}/>
+      <Result topic={topic} difficulty={difficulty} amount={amount} over={over} count={count} setOver={setOver} display={display} setDisplay={setDisplay}/>
       
       <Footer/>
-      
     </>
   )
 }

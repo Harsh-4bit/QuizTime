@@ -1,15 +1,5 @@
 @import "tailwindcss";
 
-@keyframes reverseSpin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(-360deg);
-    }
-}
-
-
 @keyframes toggle{
    33%{
         transform: rotate(-25deg);
@@ -81,8 +71,6 @@
 .slide {
     animation: slide 0.5s ease-out forwards;
 }
-
-
 
 .appear{
     @apply animate-[appear_linear];

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import clock from '/clock.svg';
 import axios from 'axios';
 
-function Question({ amount, difficulty, topic, display, setDisplay, over, setOver, count, setCount }) {
+function Question({amount, difficulty, topic, display, over, setOver, setCount}) {
     const [time, setTime] = useState(20);
     const [dispSol, setDispSol] = useState(false);
     const [data, setData] = useState([]);
@@ -15,9 +15,8 @@ function Question({ amount, difficulty, topic, display, setDisplay, over, setOve
 
     const url = `https://quizapi.io/api/v1/questions?apiKey=4fedWuKzdzUVYhUZYQBJddVm4FG4bF2YjhlacEaj&category=${topic}&difficulty=${difficulty}&limit=${amount}`;
 
-    // Function to reset quiz state when restarting
     useEffect(() => {
-        if(!display) window.scrollTo(0, 0); // Scrolls to the top when this component is mounted
+        if(!display) window.scrollTo(0, 0); 
       }, [display]);
     
     
@@ -35,7 +34,6 @@ function Question({ amount, difficulty, topic, display, setDisplay, over, setOve
         setCount(0);
     }
 
-    // Fetch quiz questions when quiz starts
     useEffect(() => {
         if (!display) {
             resetState();

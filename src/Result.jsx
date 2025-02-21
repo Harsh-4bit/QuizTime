@@ -1,7 +1,7 @@
 import trophy from '/trophy.svg'
 import { useState } from 'react';
 
-function Result({topic, difficulty, amount, over, count, setOver, setCount, display, setDisplay}){
+function Result({topic, difficulty, amount, over, count, setOver, setDisplay}){
     const [end, setEnd] = useState(false);
 
     function backClicked(){
